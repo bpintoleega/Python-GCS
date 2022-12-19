@@ -17,13 +17,13 @@ def func(n):
         # Name of the file on the GCS once uploaded
         blob = bucket.blob('LTV_GA' + filename + '.csv')
         # Path of the local file
-        blob.upload_from_filename('/Users/brenocarlo/Desktop/huawei/' + filename)
+        blob.upload_from_filename('/Users/brenocarlo/Documents/Python-GCS/Source/' + filename)
         print(filename)
     except:
         import traceback
         print(traceback.format_exc())
 
-path_of_the_directory = '/Users/brenocarlo/Desktop/huawei/'
+path_of_the_directory = '/Users/brenocarlo/Documents/Python-GCS/Source/'
 object = os.scandir(path_of_the_directory)
 for n in object :
     if n.is_dir() or n.is_file():
